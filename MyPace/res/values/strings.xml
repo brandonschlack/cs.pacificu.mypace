@@ -4,5 +4,7 @@
     <string name="app_name">MyPace</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="button_playlists">Playlists</string>
+    <string name="action_playlists">cs.pacificu.mypace.action.PLAYLISTS</string>
 
 </resources>
