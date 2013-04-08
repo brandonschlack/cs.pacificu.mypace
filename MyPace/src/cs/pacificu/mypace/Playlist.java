@@ -8,7 +8,8 @@
  */
 package cs.pacificu.mypace;
 
-import android.app.ListActivity;
+import cs.pacificu.mypace.R;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -18,7 +19,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Playlist extends ListActivity
+public class Playlist extends Activity
 {
 	static final String[] PLAYLISTS = new String[] {"Best Running Songs", 
 		"Best Walking Songs", "Personal Playlist"};
@@ -27,14 +28,16 @@ public class Playlist extends ListActivity
 	public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		//setContentView(R.layout.playlists);
+		setContentView(R.layout.playlist);
+		ListView listView = (ListView) findViewById (R.id.playlists);
 		
-		setListAdapter(new ArrayAdapter<String>(this, R.layout.playlists,PLAYLISTS));
+		listView.setAdapter(new ArrayAdapter<String>(this,R.layout.single_list_item,PLAYLISTS));
 		
-		ListView listView = getListView();
+		//ListView listView = getView();
 		listView.setTextFilterEnabled(true);
 		listView.setOnItemClickListener(new OnItemClickListener()
 		{
+			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id)
 			{
