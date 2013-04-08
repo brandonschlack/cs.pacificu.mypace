@@ -1,0 +1,28 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    
+     <Preference
+        android:key="equalizer"
+        android:title="@string/settings_Equalizer" 
+        android:summary="Set Sound EQ settings"/>
+    <CheckBoxPreference
+        android:key="gps enabled"
+        android:title="@string/settings_GPS"
+        android:summary="Set Sound EQ Settings"
+        android:defaultValue="false" />
+    <Preference
+        android:key="pace"
+        android:title="@string/settings_Pace" 
+        android:summary="Determines what pace is running" />
+     <Preference
+        android:key="usb"
+        android:title="@string/settings_USB" 
+        android:summary="Sync music with a computer"/>
+     <Preference
+        android:key="scan"
+        android:title="@string/settings_Scan" 
+        android:summary="Scan for new music or playlists"/>
+     <Preference
+        android:key="about"
+        android:title="@string/settings_About" 
+        android:summary="Version 0.1"/>
+</PreferenceScreen>

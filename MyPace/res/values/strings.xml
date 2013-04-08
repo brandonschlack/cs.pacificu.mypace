@@ -10,5 +10,24 @@
     <string name="skin_name_Default">Default</string>
     <string name="skin_name_HTC">HTC</string>
     <string name="skin_name_Aluminum">Aluminum</string>
+    <string name="settings_Equalizer">Equalizer</string>
+    <string name="settings_GPS">GPS Tracking</string>
+    <string name="settings_Pace">Pace Threshold</string>
+    <string name="settings_USB">USB Sync</string>
+    <string name="settings_Scan">Scan Media</string>
+    <string name="settings_About">About</string>
+    <string-array name="Skins">
+        <item >@string/skin_name_Default</item>
+        <item >@string/skin_name_HTC</item>
+        <item >@string/skin_name_Aluminum</item>
+    </string-array>
+    <string-array name="Settings">
+        <item >@string/settings_Equalizer</item>
+        <item >@string/settings_GPS</item>
+        <item >@string/settings_Pace</item>
+        <item >@string/settings_USB</item>
+        <item >@string/settings_Scan</item>
+        <item >@string/settings_About</item>
+    </string-array>
 
 </resources>

@@ -40,7 +40,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="Skin" android:label="Skin"></activity>
+        <activity android:name="cs.pacificu.mypace.Skin" android:label="Skin"></activity>
+        <activity android:name="cs.pacificu.mypace.Settings" android:label="Settings"></activity>
     </application>
 
 </manifest>
