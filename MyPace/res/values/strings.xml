@@ -6,5 +6,9 @@
     <string name="hello_world">Hello world!</string>
     <string name="button_playlists">Playlists</string>
     <string name="action_playlists">cs.pacificu.mypace.action.PLAYLISTS</string>
+    <string name="skin_setting">Change Skin</string>
+    <string name="skin_name_Default">Default</string>
+    <string name="skin_name_HTC">HTC</string>
+    <string name="skin_name_Aluminum">Aluminum</string>
 
 </resources>

@@ -23,15 +23,24 @@
             </intent-filter>
         </activity>
         
+        <activity 
+            android:name="cs.pacificu.mypace.ActionBar"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        
         <activity
             android:name="cs.pacificu.mypace.Playlist"
             android:label="Playlists" >
             <intent-filter>
-                <action android:name="cs.pacificu.mypace.action.PLAYLISTS" />   
-                
+                <action android:name="cs.pacificu.mypace.action.PLAYLISTS" />            
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name="Skin" android:label="Skin"></activity>
     </application>
 
 </manifest>
