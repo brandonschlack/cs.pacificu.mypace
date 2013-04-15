@@ -29,5 +29,6 @@
         <item >@string/settings_Scan</item>
         <item >@string/settings_About</item>
     </string-array>
+    
 
 </resources>
