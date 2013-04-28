@@ -1,0 +1,10 @@
+
+    <resources>
+        <string-array name="sorting">
+            <item >Playlists</item>
+            <item >Artists</item>
+            <item >Albums</item>
+            <item >Songs</item>
+            <item >Genres</item>
+        </string-array>
+    </resources>

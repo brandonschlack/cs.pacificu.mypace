@@ -2,7 +2,7 @@ MyPace ReadMe
 
 - Out app is not fully functional right now. We do not have different skins drawn out to change to and do not have music fully functioning yet.
 
-- In orer to test the app on an emulator you need to install the .apk file
+- In order to test the app on an emulator you need to install the .apk file
 
 - To run the application on your phone install the application
 

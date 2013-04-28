@@ -10,10 +10,9 @@ package cs.pacificu.mypace;
 
 import cs.pacificu.mypace.R;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -21,8 +20,13 @@ import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
 
-public class Playlist extends Activity
+public class Playlist extends SherlockActivity
 {
 	static final String[] PLAYLISTS = new String[] {"Best Running Songs", 
 		"Best Walking Songs", "Personal Playlist"};
@@ -31,6 +35,8 @@ public class Playlist extends Activity
 	public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
+		
+		getSupportActionBar();
 		setContentView(R.layout.playlist);
 		ListView listView = (ListView) findViewById (R.id.playlists);
 		
@@ -51,16 +57,18 @@ public class Playlist extends Activity
 		});
 	}
 	
-	 @Override
-	    public boolean onCreateOptionsMenu(Menu menu)
-	    {
-	        // Inflate the menu; this adds items to the action bar if it is present.
-	        getMenuInflater().inflate(R.menu.main, menu);
-	        
+	@Override
+		public boolean onCreateOptionsMenu(Menu menu) 
+		{
+			//Inflate the menu; this adds items to the action bar if it is present.
+	        getSupportMenuInflater().inflate(R.menu.main, menu);
+			
+			/*menu.add("Settings")
+	        	.setIcon(R.drawable.gear)
+	        	.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);*/
 	        return true;
-	    }
+		}
 	    
-	    @Override
 	    public boolean onOptionsItemSelected (MenuItem item)
 	    {
 	    	switch (item.getItemId()) {
