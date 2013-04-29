@@ -972,7 +972,6 @@ containing a value of this type.
         public static final int showCustom=0x7f040008;
         public static final int showHome=0x7f040005;
         public static final int showTitle=0x7f040007;
-        public static final int skin=0x7f04003a;
         public static final int tabMode=0x7f040003;
         public static final int text=0x7f040036;
         public static final int txt_your_name=0x7f040035;
@@ -1063,15 +1062,15 @@ containing a value of this type.
         public static final int button_playlists=0x7f090010;
         public static final int hello_world=0x7f09000f;
         public static final int settings_About=0x7f09001b;
-        public static final int settings_Equalizer=0x7f090016;
-        public static final int settings_GPS=0x7f090017;
+        public static final int settings_Equalizer=0x7f090015;
+        public static final int settings_GPS=0x7f090016;
         public static final int settings_Pace=0x7f090018;
         public static final int settings_Scan=0x7f09001a;
+        public static final int settings_Skins=0x7f090017;
         public static final int settings_USB=0x7f090019;
-        public static final int skin_name_Aluminum=0x7f090015;
-        public static final int skin_name_Default=0x7f090013;
-        public static final int skin_name_HTC=0x7f090014;
-        public static final int skin_setting=0x7f090012;
+        public static final int skin_name_Aluminum=0x7f090014;
+        public static final int skin_name_Default=0x7f090012;
+        public static final int skin_name_HTC=0x7f090013;
     }
     public static final class style {
         /** 

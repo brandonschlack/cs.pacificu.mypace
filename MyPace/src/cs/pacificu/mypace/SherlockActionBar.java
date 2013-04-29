@@ -25,6 +25,7 @@ public class SherlockActionBar extends SherlockActivity implements ActionBar.OnN
         ArrayAdapter<CharSequence> list = ArrayAdapter.createFromResource(context, R.array.sorting, R.layout.sherlock_spinner_item);
         list.setDropDownViewResource(R.layout.sherlock_spinner_dropdown_item);
 
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
         getSupportActionBar().setListNavigationCallbacks(list, this);
     }

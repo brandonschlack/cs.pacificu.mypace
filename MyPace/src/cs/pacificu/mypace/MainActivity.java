@@ -36,9 +36,6 @@ public class MainActivity extends Activity {
     public boolean onOptionsItemSelected (MenuItem item)
     {
     	switch (item.getItemId()) {
-        case R.id.skin:
-            changeSkin();
-            return true;
         case R.id.action_settings:
             settingsList();
             return true;

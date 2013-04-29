@@ -8,22 +8,17 @@
  */
 package cs.pacificu.mypace;
 
-import cs.pacificu.mypace.R;
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 
 public class Playlist extends SherlockActivity
@@ -36,12 +31,11 @@ public class Playlist extends SherlockActivity
 	{
 		super.onCreate(savedInstanceState);
 		
-		getSupportActionBar();
+		
+		
 		setContentView(R.layout.playlist);
-		ListView listView = (ListView) findViewById (R.id.playlists);
-		
-		listView.setAdapter(new ArrayAdapter<String>(this,R.layout.single_list_item,PLAYLISTS));
-		
+		ListView listView = (ListView) findViewById (R.id.playlists);		
+		listView.setAdapter(new ArrayAdapter<String>(this,R.layout.single_list_item,PLAYLISTS));	
 		//ListView listView = getView();
 		listView.setTextFilterEnabled(true);
 		listView.setOnItemClickListener(new OnItemClickListener()
@@ -72,9 +66,6 @@ public class Playlist extends SherlockActivity
 	    public boolean onOptionsItemSelected (MenuItem item)
 	    {
 	    	switch (item.getItemId()) {
-	        case R.id.skin:
-	            changeSkin();
-	            return true;
 	        case R.id.action_settings:
 	            settingsList();
 	            return true;

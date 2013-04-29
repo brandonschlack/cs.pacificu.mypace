@@ -5,10 +5,16 @@
         android:title="@string/settings_Equalizer" 
         android:summary="Set Sound EQ settings"/>
     <CheckBoxPreference
-        android:key="gps enabled"
+        android:key="gps"
         android:title="@string/settings_GPS"
         android:summary="Set Sound EQ Settings"
         android:defaultValue="false" />
+    <ListPreference
+        android:key="skins"
+        android:title="@string/settings_Skins" 
+        android:entries="@array/Skins"
+        android:entryValues="@array/Skins"
+        android:summary="Change the look of the app"/> 
     <Preference
         android:key="pace"
         android:title="@string/settings_Pace" 

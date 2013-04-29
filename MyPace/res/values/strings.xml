@@ -6,12 +6,12 @@
     <string name="hello_world">Hello world!</string>
     <string name="button_playlists">Playlists</string>
     <string name="action_playlists">cs.pacificu.mypace.action.PLAYLISTS</string>
-    <string name="skin_setting">Change Skin</string>
     <string name="skin_name_Default">Default</string>
     <string name="skin_name_HTC">HTC</string>
     <string name="skin_name_Aluminum">Aluminum</string>
     <string name="settings_Equalizer">Equalizer</string>
     <string name="settings_GPS">GPS Tracking</string>
+    <string name="settings_Skins">Change Skin</string>
     <string name="settings_Pace">Pace Threshold</string>
     <string name="settings_USB">USB Sync</string>
     <string name="settings_Scan">Scan Media</string>
@@ -24,6 +24,7 @@
     <string-array name="Settings">
         <item >@string/settings_Equalizer</item>
         <item >@string/settings_GPS</item>
+        <item >@string/settings_Skins</item>
         <item >@string/settings_Pace</item>
         <item >@string/settings_USB</item>
         <item >@string/settings_Scan</item>

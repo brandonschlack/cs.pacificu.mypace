@@ -20,8 +20,6 @@ public class Settings extends PreferenceActivity
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
-		/*final String[] SETTINGS = new String[] {"Equalizer",
-			"GPS Tracking", "Pace Threshold", "USB Sync", "Scan Media", "About"};*/
 		
 		super.onCreate(savedInstanceState);
 		addPreferencesFromResource(R.layout.settings);
@@ -85,7 +83,8 @@ public class Settings extends PreferenceActivity
 			}
 			
 		});
+		
+		
 	}
-
 }
 
