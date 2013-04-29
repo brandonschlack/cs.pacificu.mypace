@@ -7,8 +7,8 @@
     <string name="button_playlists">Playlists</string>
     <string name="action_playlists">cs.pacificu.mypace.action.PLAYLISTS</string>
     <string name="skin_name_Default">Default</string>
-    <string name="skin_name_HTC">HTC</string>
-    <string name="skin_name_Aluminum">Aluminum</string>
+    <string name="skin_name_Light">Light</string>
+    <string name="skin_name_Dark">Dark</string>
     <string name="settings_Equalizer">Equalizer</string>
     <string name="settings_GPS">GPS Tracking</string>
     <string name="settings_Skins">Change Skin</string>
@@ -16,11 +16,6 @@
     <string name="settings_USB">USB Sync</string>
     <string name="settings_Scan">Scan Media</string>
     <string name="settings_About">About</string>
-    <string-array name="Skins">
-        <item >@string/skin_name_Default</item>
-        <item >@string/skin_name_HTC</item>
-        <item >@string/skin_name_Aluminum</item>
-    </string-array>
     <string-array name="Settings">
         <item >@string/settings_Equalizer</item>
         <item >@string/settings_GPS</item>

@@ -9,6 +9,7 @@
 package cs.pacificu.mypace;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -29,12 +30,32 @@ public class Playlist extends SherlockActivity
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
+		/*SharedPreferences settings = getSharedPreferences("settings", MODE_PRIVATE);
+		if (settings.getString("skins", "") == "@string/skin_name_Light")
+		{
+			setTheme(Theme.Sherlock.Light);
+		};*/
+		
+		SharedPreferences settings = getSharedPreferences("settings", MODE_PRIVATE);
+		String skinPref = settings.getString("skins", "@string/skin_name_Default");
+		
+		if (skinPref == "@string/skin_name_Default")
+		{
+			setTheme(R.style.AppBaseTheme);
+		}
+		else if (skinPref == "@string/skin_name_Light")
+		{
+			Playlist.this.setTheme(R.style.Light);
+		}
+		else if (skinPref == "@string/skin_name_Dark")
+		{
+			Playlist.this.setTheme(R.style.Dark);
+		}
+		
 		super.onCreate(savedInstanceState);
 		
-		
-		
 		setContentView(R.layout.playlist);
-		ListView listView = (ListView) findViewById (R.id.playlists);		
+		ListView listView = (ListView) findViewById (R.id.playlists);
 		listView.setAdapter(new ArrayAdapter<String>(this,R.layout.single_list_item,PLAYLISTS));	
 		//ListView listView = getView();
 		listView.setTextFilterEnabled(true);
@@ -49,6 +70,28 @@ public class Playlist extends SherlockActivity
 				((TextView) view).getText(), Toast.LENGTH_SHORT).show();
 			}
 		});
+	}
+	
+	@Override
+	public void onResume ()
+	{
+		super.onResume();
+		
+		SharedPreferences settings = getSharedPreferences("settings", MODE_PRIVATE);
+		String skinPref = settings.getString("skins", "@string/skin_name_Default");
+		
+		if (skinPref == "@string/skin_name_Default")
+		{
+			Playlist.this.setTheme(R.style.AppBaseTheme);
+		}
+		else if (skinPref == "@string/skin_name_Light")
+		{
+			Playlist.this.setTheme(R.style.Light);
+		}
+		else if (skinPref == "@string/skin_name_Dark")
+		{
+			Playlist.this.setTheme(R.style.Dark);
+		}
 	}
 	
 	@Override

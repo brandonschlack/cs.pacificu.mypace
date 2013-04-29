@@ -1,5 +1,4 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    
      <Preference
         android:key="equalizer"
         android:title="@string/settings_Equalizer" 
@@ -8,12 +7,13 @@
         android:key="gps"
         android:title="@string/settings_GPS"
         android:summary="Set Sound EQ Settings"
-        android:defaultValue="false" />
+        android:defaultValue="true" />
     <ListPreference
         android:key="skins"
         android:title="@string/settings_Skins" 
         android:entries="@array/Skins"
         android:entryValues="@array/Skins"
+        android:defaultValue="@string/skin_name_Default"
         android:summary="Change the look of the app"/> 
     <Preference
         android:key="pace"

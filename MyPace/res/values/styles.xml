@@ -16,12 +16,10 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-    <style name="CustomOverflow" parent="android:style/Theme.Light">
-     	<item name="android:actionOverflowButtonStyle">@style/CustomOverflowButton</item>
+    <style name="Light" parent="Theme.Sherlock.Light">
 	</style>
 
-	<style name="CustomOverflowButton" parent="android:style/Widget.Holo.ActionButton.Overflow">
-    	<item name="android:src">@drawable/gear</item>
+	<style name="Dark" parent="Theme.Sherlock">
 	</style>
 
 </resources>

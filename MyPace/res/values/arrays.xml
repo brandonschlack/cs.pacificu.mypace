@@ -9,7 +9,7 @@
         </string-array>
         <string-array name="Skins">
         	<item >@string/skin_name_Default</item>
-        	<item >@string/skin_name_HTC</item>
-        	<item >@string/skin_name_Aluminum</item>
+        	<item >@string/skin_name_Light</item>
+        	<item >@string/skin_name_Dark</item>
     	</string-array>
     </resources>

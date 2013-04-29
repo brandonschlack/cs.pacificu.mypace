@@ -1068,9 +1068,9 @@ containing a value of this type.
         public static final int settings_Scan=0x7f09001a;
         public static final int settings_Skins=0x7f090017;
         public static final int settings_USB=0x7f090019;
-        public static final int skin_name_Aluminum=0x7f090014;
+        public static final int skin_name_Dark=0x7f090014;
         public static final int skin_name_Default=0x7f090012;
-        public static final int skin_name_HTC=0x7f090013;
+        public static final int skin_name_Light=0x7f090013;
     }
     public static final class style {
         /** 
@@ -1099,8 +1099,8 @@ containing a value of this type.
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f0a005a;
-        public static final int CustomOverflow=0x7f0a005b;
-        public static final int CustomOverflowButton=0x7f0a005c;
+        public static final int Dark=0x7f0a005c;
+        public static final int Light=0x7f0a005b;
         public static final int Sherlock___TextAppearance_Small=0x7f0a0046;
         public static final int Sherlock___Theme=0x7f0a0051;
         public static final int Sherlock___Theme_DarkActionBar=0x7f0a0053;
