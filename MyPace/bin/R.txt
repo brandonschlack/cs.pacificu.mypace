@@ -336,6 +336,7 @@ int layout sherlock_spinner_dropdown_item 0x7f03001b
 int layout sherlock_spinner_item 0x7f03001c
 int layout single_list_item 0x7f03001d
 int menu main 0x7f0c0000
+int string about_verison 0x7f09001c
 int string abs__action_bar_home_description 0x7f090000
 int string abs__action_bar_up_description 0x7f090001
 int string abs__action_menu_overflow_description 0x7f090002

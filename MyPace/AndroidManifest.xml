@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cs.pacificu.mypace"
-    android:versionCode="1"
-    android:versionName="0.4" >
+    android:versionCode="@string/about_verison"
+    android:versionName="@string/about_verison" >
 
     <uses-sdk
         android:minSdkVersion="9"

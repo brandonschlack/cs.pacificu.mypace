@@ -1,8 +1,8 @@
 package cs.pacificu.mypace;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
@@ -22,8 +22,8 @@ import android.widget.Toast;
 public class Settings extends PreferenceActivity
 {
 
-	private OnSharedPreferenceChangeListener skinListener;
 	private OnSharedPreferenceChangeListener ToastListener;
+	private OnSharedPreferenceChangeListener SkinListener;
 
 	@SuppressWarnings("deprecation")
 	@Override
@@ -120,15 +120,37 @@ public class Settings extends PreferenceActivity
 				return true;
 		    }
 		});
-		//String skinValue = skinPref.getValue();
-		//editor.putString("skins", skinValue);
-		//editor.commit();
 		
 		ToastListener = new SharedPreferences.OnSharedPreferenceChangeListener() {
 			  public void onSharedPreferenceChanged(SharedPreferences settings, String key) {
-			    Toast.makeText(getApplicationContext(), key, Toast.LENGTH_SHORT).show();
+				String ToastText = settings.getString("skins", "@string/skin_name_Default");
+				Intent intent = new Intent(getBaseContext(),Playlist.class);
+				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(intent);
+			    Toast.makeText(getApplicationContext(), ToastText, Toast.LENGTH_SHORT).show();
 			  }
-			}; 	
+			};
+			
+		SkinListener= new SharedPreferences.OnSharedPreferenceChangeListener() {
+			  public void onSharedPreferenceChanged(SharedPreferences settings, String key) {
+				String skinValue = settings.getString("skins", "Default");
+				if (skinValue == "Default")
+				{
+					setTheme(R.style.AppBaseTheme);
+				}
+				else if (skinValue == "Light")
+				{
+					setTheme(R.style.Light);
+				}
+				else if (skinValue == "Dark")
+				{
+					setTheme(R.style.Dark);
+				}
+				Intent intent = new Intent(getBaseContext(),Playlist.class);
+				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(intent);
+			  }
+			};
 		settings.registerOnSharedPreferenceChangeListener(ToastListener);
 		
 	}

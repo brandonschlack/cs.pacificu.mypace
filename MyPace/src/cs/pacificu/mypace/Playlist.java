@@ -8,8 +8,10 @@
  */
 package cs.pacificu.mypace;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -26,6 +28,7 @@ public class Playlist extends SherlockActivity
 {
 	static final String[] PLAYLISTS = new String[] {"Best Running Songs", 
 		"Best Walking Songs", "Personal Playlist"};
+	private OnSharedPreferenceChangeListener SkinListener;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState)
@@ -37,19 +40,20 @@ public class Playlist extends SherlockActivity
 		};*/
 		
 		SharedPreferences settings = getSharedPreferences("settings", MODE_PRIVATE);
-		String skinPref = settings.getString("skins", "@string/skin_name_Default");
-		
-		if (skinPref == "@string/skin_name_Default")
+		String skinValue = settings.getString("skins", "");
+		if (skinValue == "Dark")
+		{
+			//setTheme(R.style.Dark);
+			setTheme(R.style.Dark);
+		}
+			else if (skinValue == "Light")
+		{
+			//setTheme(R.style.Light);
+			setTheme(R.style.Light);
+		}
+			else if(skinValue == "Default")
 		{
 			setTheme(R.style.AppBaseTheme);
-		}
-		else if (skinPref == "@string/skin_name_Light")
-		{
-			Playlist.this.setTheme(R.style.Light);
-		}
-		else if (skinPref == "@string/skin_name_Dark")
-		{
-			Playlist.this.setTheme(R.style.Dark);
 		}
 		
 		super.onCreate(savedInstanceState);
@@ -78,19 +82,20 @@ public class Playlist extends SherlockActivity
 		super.onResume();
 		
 		SharedPreferences settings = getSharedPreferences("settings", MODE_PRIVATE);
-		String skinPref = settings.getString("skins", "@string/skin_name_Default");
-		
-		if (skinPref == "@string/skin_name_Default")
+		String skinValue = settings.getString("skins", "");
+		if (skinValue == "Dark")
 		{
-			Playlist.this.setTheme(R.style.AppBaseTheme);
+			//setTheme(R.style.Dark);
+			setTheme(R.style.Dark);
 		}
-		else if (skinPref == "@string/skin_name_Light")
+			else if (skinValue == "Light")
 		{
-			Playlist.this.setTheme(R.style.Light);
+			//setTheme(R.style.Light);
+			setTheme(R.style.Light);
 		}
-		else if (skinPref == "@string/skin_name_Dark")
+			else if(skinValue == "Default")
 		{
-			Playlist.this.setTheme(R.style.Dark);
+			setTheme(R.style.AppBaseTheme);
 		}
 	}
 	
