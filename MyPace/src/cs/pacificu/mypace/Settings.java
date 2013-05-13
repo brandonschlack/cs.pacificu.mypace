@@ -123,10 +123,11 @@ public class Settings extends PreferenceActivity
 		
 		ToastListener = new SharedPreferences.OnSharedPreferenceChangeListener() {
 			  public void onSharedPreferenceChanged(SharedPreferences settings, String key) {
-				String ToastText = settings.getString("skins", "@string/skin_name_Default");
-				Intent intent = new Intent(getBaseContext(),Playlist.class);
+				String ToastText = settings.getString(key, "");
+				 //////////
+				/*Intent intent = new Intent(getBaseContext(),Playlist.class);
 				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-				startActivity(intent);
+				startActivity(intent);*/
 			    Toast.makeText(getApplicationContext(), ToastText, Toast.LENGTH_SHORT).show();
 			  }
 			};
@@ -146,6 +147,9 @@ public class Settings extends PreferenceActivity
 				{
 					setTheme(R.style.Dark);
 				}
+				/*String stringKey = key.toString();
+				String ToastText = settings.getString(stringKey, "");
+				Toast.makeText(getApplicationContext(), ToastText, Toast.LENGTH_SHORT).show();*/
 				Intent intent = new Intent(getBaseContext(),Playlist.class);
 				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				startActivity(intent);
