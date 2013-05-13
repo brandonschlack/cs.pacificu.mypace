@@ -6,7 +6,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
-import android.content.res.Resources.Theme;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -25,7 +24,6 @@ public class Settings extends PreferenceActivity
 {
 
 	private OnSharedPreferenceChangeListener ToastListener;
-	private OnSharedPreferenceChangeListener SkinListener;
 
 	@SuppressWarnings("deprecation")
 	@Override
@@ -154,27 +152,6 @@ public class Settings extends PreferenceActivity
 			  }
 			};
 			
-		SkinListener= new SharedPreferences.OnSharedPreferenceChangeListener() {
-			  public void onSharedPreferenceChanged(SharedPreferences settings, String key) {
-				String skinValue = settings.getString("skins", "Default");
-				if (skinValue == "Default")
-				{
-					
-					getApplicationContext().setTheme(R.style.AppBaseTheme);
-				}
-				else if (skinValue == "Light")
-				{
-					getApplicationContext().setTheme(R.style.Light);
-				}
-				else if (skinValue == "Dark")
-				{
-					getApplicationContext().setTheme(R.style.Dark);
-				}
-				Intent intent = new Intent(getBaseContext(),Playlist.class);
-				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-				startActivity(intent);
-			  }
-			};
 		settings.registerOnSharedPreferenceChangeListener(ToastListener);
 		
 	}
