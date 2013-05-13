@@ -28,7 +28,6 @@ public class Playlist extends SherlockActivity
 {
 	static final String[] PLAYLISTS = new String[] {"Best Running Songs", 
 		"Best Walking Songs", "Personal Playlist"};
-	private OnSharedPreferenceChangeListener SkinListener;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState)
@@ -40,7 +39,8 @@ public class Playlist extends SherlockActivity
 		};*/
 		
 		SharedPreferences settings = getSharedPreferences("settings", MODE_PRIVATE);
-		String skinValue = settings.getString("skins", "");
+		/*String skinValue = settings.getString("skins", "");
+		
 		if (skinValue == "Dark")
 		{
 			//setTheme(R.style.Dark);
@@ -54,7 +54,7 @@ public class Playlist extends SherlockActivity
 			else if(skinValue == "Default")
 		{
 			setTheme(R.style.AppBaseTheme);
-		}
+		}*/
 		
 		super.onCreate(savedInstanceState);
 		
@@ -74,29 +74,6 @@ public class Playlist extends SherlockActivity
 				((TextView) view).getText(), Toast.LENGTH_SHORT).show();
 			}
 		});
-	}
-	
-	@Override
-	public void onResume ()
-	{
-		super.onResume();
-		
-		SharedPreferences settings = getSharedPreferences("settings", MODE_PRIVATE);
-		String skinValue = settings.getString("skins", "");
-		if (skinValue == "Dark")
-		{
-			//setTheme(R.style.Dark);
-			setTheme(R.style.Dark);
-		}
-			else if (skinValue == "Light")
-		{
-			//setTheme(R.style.Light);
-			setTheme(R.style.Light);
-		}
-			else if(skinValue == "Default")
-		{
-			setTheme(R.style.AppBaseTheme);
-		}
 	}
 	
 	@Override
