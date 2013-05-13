@@ -30,29 +30,26 @@ public class Playlist extends SherlockActivity
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
-		/*SharedPreferences settings = getSharedPreferences("settings", MODE_PRIVATE);
-		if (settings.getString("skins", "") == "@string/skin_name_Light")
-		{
-			setTheme(Theme.Sherlock.Light);
-		};*/
 		
+		//Skins Block
 		SharedPreferences settings = getSharedPreferences("settings", MODE_PRIVATE);
-		/*String skinValue = settings.getString("skins", "");
+		String skinValue = settings.getString("skins", "");
 		
-		if (skinValue == "Dark")
+		if (skinValue.equals("Dark"))
 		{
 			//setTheme(R.style.Dark);
 			setTheme(R.style.Dark);
 		}
-			else if (skinValue == "Light")
+			else if (skinValue.equals("Light"))
 		{
 			//setTheme(R.style.Light);
 			setTheme(R.style.Light);
 		}
-			else if(skinValue == "Default")
+			else if(skinValue.equals("Default"))
 		{
 			setTheme(R.style.AppBaseTheme);
-		}*/
+		}
+		//Skins Block
 		
 		super.onCreate(savedInstanceState);
 		

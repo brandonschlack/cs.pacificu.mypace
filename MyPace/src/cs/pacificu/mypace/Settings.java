@@ -29,13 +29,29 @@ public class Settings extends PreferenceActivity
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
+		final SharedPreferences settings = getSharedPreferences("settings", MODE_PRIVATE);
+		final SharedPreferences.Editor editor = settings.edit();
+		//Skins Block
+		String skinValue = settings.getString("skins", "");	
+		if (skinValue.equals("Dark"))
+		{
+			//setTheme(R.style.Dark);
+			setTheme(R.style.Dark);
+		}
+			else if (skinValue.equals("Light"))
+		{
+			//setTheme(R.style.Light);
+			setTheme(R.style.Light);
+		}
+			else if(skinValue.equals("Default"))
+		{
+			setTheme(R.style.AppBaseTheme);
+		}
+		//Skins Block
 		
 		super.onCreate(savedInstanceState);
 		addPreferencesFromResource(R.layout.settings);
 		PreferenceManager.setDefaultValues(Settings.this, R.layout.settings, false);
-		
-		final SharedPreferences settings = getSharedPreferences("settings", MODE_PRIVATE);
-		final SharedPreferences.Editor editor = settings.edit();
 		
 		Preference equalizerPref = (Preference) findPreference ("equalizer");
 		equalizerPref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
@@ -132,15 +148,15 @@ public class Settings extends PreferenceActivity
 				  {
 					  ToastText = settings.getString(key, "");
 					  Context AppTheme = getApplicationContext();
-					  if (ToastText == "Default")
+					  if (ToastText.equals("Default"))
 					  {
 						  AppTheme.setTheme(R.style.AppBaseTheme);
 					  }
-					  else if (ToastText == "Light")
+					  else if (ToastText.equals("Light"))
 					  {
 						  AppTheme.setTheme(R.style.Light);
 					  }
-					  else if (ToastText == "Dark")
+					  else if (ToastText.equals("Dark"))
 					  {
 						  AppTheme.setTheme(R.style.Dark);
 					  }
